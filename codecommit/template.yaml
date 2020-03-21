@@ -1,0 +1,27 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Description: CodeCommit sample
+
+Resources:
+  Repository:
+    Type: AWS::CodeCommit::Repository
+    Properties:
+      # Code:
+      #   Code
+      RepositoryDescription: Repository description
+      RepositoryName: Repositoryname
+      # Tags:
+      #   - Tag
+      # Triggers:
+      #   - Branches:
+      #       - develop
+      #     CustomData: String
+      #     DestinationArn: String
+      #     Events:
+      #       - String
+      #     Name: Test trigger
+
+Outputs:
+  RepositoryID:
+    Value: !Ref Repository
+    Export:
+      Name: RepositoryID
